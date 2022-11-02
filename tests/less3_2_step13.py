@@ -4,9 +4,9 @@ import unittest
 
 
 class TestLink(unittest.TestCase):
-    self.wel_mess = "Congratulations! You have successfully registered!"
+    wel_mess = "Congratulations! You have successfully registered!"
 
-    def op_link(link):
+    def op_link(self, link):
         welcome_text = ''
         try:
             value = ['.first_block > .form-group > .first',
@@ -37,7 +37,7 @@ class TestLink(unittest.TestCase):
 
         finally:
             # ожидание чтобы визуально оценить результаты прохождения скрипта
-            time.sleep(10)
+            time.sleep(1)
             # закрываем браузер после всех манипуляций
             browser.quit()
         return welcome_text
